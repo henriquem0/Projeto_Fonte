@@ -25,6 +25,8 @@ Construção de uma fonte de tensão retificadora ajustável entre 3V e 12V com 
 
 > Valor total gasto:
 
+
+
 ## Papel de Cada Componente
 ### Transformador
 É o componente de entrada. Ele reduz os 127V alternados da tomada (que são perigosos) para 12V alternados. Ele também isola o restante do circuito da rede elétrica por segurança.
@@ -56,17 +58,24 @@ Resistor de estabilização de saída que garante uma circulação de corrente m
 ### LED Vermelho e Resistor Limitador
 Conjunto indicador visual. O LED acende para confirmar que a fonte está ativa e gerando tensão na saída, enquanto o resistor de 4,7k Ohw limita a corrente para que o LED opere com segurança sem queimar quando a saída atingir o valor máximo de 12V.
 
+
+
+
 ## Cálculos Necessários
 ### 1. Cálculo do Transformador e Entrada
 A tensão residencial nominal eficaz da tomada é $V_{\text{RMS}} = 127\text{V}$. O valor de pico máximo dessa senoide alimentadora é: 
 $$V_{\text{pico}} = V_{\text{RMS}} \times \sqrt{2} = 127 \times 1,4142 \approx \mathbf{180\text{V}}$$
 
 No simulador, a tensão contínua perfeitamente estabilizada sobre o capacitor de filtro atingiu o pico de $25,959\text{V}$ ($\approx 26\text{V}$). A relação de transformação de espiras ($N$) necessária para ajustar o transformador é:
+
 $$\text{Relação de Espiras} = \frac{V_{\text{pico\_primário}}}{V_{\text{capacitor}}} = \frac{180\text{V}}{26\text{V}} \approx \mathbf{6,92}$$
 
 ### 2. Comportamento de Queda no Transistor
 O transistor NPN operando como seguidor de emissor dita que a tensão final disponível na saída ($V_{\text{saída}}$) rastreia a tensão ajustada na base 
-($V_{\text{base}}$), subtraindo a barreira de silício da junção Base-Emissor ($V_{\text{BE}} = 0,7\text{V}$):$$V_{\text{saída}} = V_{\text{base}} - 0,7\text{V} \implies V_{\text{base}} = V_{\text{saída}} + 0,7\text{V}$$
+($V_{\text{base}}$), subtraindo a barreira de silício da junção Base-Emissor 
+
+($V_{\text{BE}} = 0,7\text{V}$):$$V_{\text{saída}} = V_{\text{base}} - 0,7\text{V} \implies V_{\text{base}} = V_{\text{saída}} + 0,7\text{V}$$
+
 Para alcançar a janela de regulação final na saída da fonte (de 3V a 12V), a base precisa receber os seguintes limites:Para saída mínima de 3V:
 
 $V_{\text{base\_mínima}} = 3\text{V} + 0,7\text{V} = \mathbf{3,7\text{V}}$Para saída máxima de 12V: $V_{\text{base\_máxima}} = 12\text{V} + 0,7\text{V} = \mathbf{12,7\text{V}}$
