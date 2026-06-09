@@ -10,19 +10,18 @@ Construção de uma fonte de tensão retificadora ajustável entre 3V e 12V com 
 # Tabela de Componentes 
 |Quantidade|Componente|Descrição|Valor Unitário|
 |:---------|:---------|:--------|:-------------|
-|1         |Protoboard|840 pontos de conexão|	R$ 39,10|
-|1	|Kit Jumper	Macho-Macho + Macho-Fêmea	|R$ 28,89|
-|1	|Capacitor	470 uF|	R$ 0,44|
-|1	|Potenciômetro	10 kΩ, 1W|	R$ 7,00|
-|1	|Resistor	2,7 kΩ, 1W|	R$ 0,40|
-|1	|Resistor	3,3 kΩ|	R$ 0,07|
-|4	|Resistor	1,2 kΩ|	R$ 0,13|
-|1	|Resistor	100 Ω, 2W|	R$ 1,20|
-|1	|Resistor	120 Ω|	R$ 1,90|
-|4	|Diodo Retificador	1N4007|	R$ 0,20|
-|1	|Diodo Zener	13V, 1W|	R$ 0,50|
-|1	|LED	5MM Difuso 333‑2SDRD/S530‑L|	R$ 0,50|
-|1	|Transistor	NPN BC338-25|	R$ 0,45|
+|1         |Protoboard|xxx pontos de conexão|	R$ 39,10|
+|1	|Kit Jumper	|Macho-Macho + Macho-Fêmea	|R$ 28,89|
+|1	|Capacitor	|470 uF|	R$ 0,44|
+|1	|Potenciômetro	|10 kΩ, 1W|	R$ 7,00|
+|1	|Resistor	|1,2 kΩ, 1W|	R$ 0,40|
+|1	|Resistor	|5,4 kΩ|	R$ 0,07|
+|4	|Resistor	|120 Ω|	R$ 0,13|
+|1	|Resistor	|4,7 kΩ, 2W|	R$ 1,20|
+|4	|Diodo Retificador	|1N4007|	R$ 0,20|
+|1	|Diodo Zener	|13V, 1W|	R$ 0,50|
+|1	|LED	5MM |Difuso 333‑2SDRD/S530‑L|	R$ 0,50|
+|1	|Transistor	|NPN BC338-25|	R$ 0,45|
 
 
 # Circuito Falstad
