@@ -23,6 +23,39 @@ Construção de uma fonte de tensão retificadora ajustável entre 3V e 12V com 
 |1	|LED	5MM |Difuso 333‑2SDRD/S530‑L|	R$ 0,50|
 |1	|Transistor	|NPN BC338-25|	R$ 0,45|
 
+> Valor total gasto:
+
+## Papel de Cada Componente
+### ransformador (127V para 12V AC):
+É o componente de entrada. Ele reduz os 127V alternados da tomada (que são perigosos) para 12V alternados. Ele também isola o restante do circuito da rede elétrica por segurança.
+
+### Ponte Retificadora (Diodos 1N4007): 
+A energia do transformador ainda é alternada (muda de direção 60 vezes por segundo). A ponte de diodos direciona essa corrente para que ela flua em um único sentido, transformando Corrente Alternada (AC) em Corrente Contínua (DC) pulsante.
+
+### Capacitor Eletrolítico (470uF): 
+Funciona como um "reservatório" ou amortecedor de energia. Ele armazena carga nos momentos de pico da onda e descarrega nos momentos de queda. Isso elimina os pulsos da retificação (chamados de ripple), deixando a tensão contínua lisa e linear (cerca de 24,2V).
+
+### Resistor de Polarização (1,2 kOhw/ 2W): 
+Ele limita a corrente que vai para o diodo Zener. Sem ele, o Zener receberia toda a potência do capacitor e queimaria instantaneamente. Ele absorve o "excesso" de tensão (11,2V) e o transforma em calor.
+
+### Diodo Zener (13V / 1W): 
+É o coração da referência de tensão. Não importa se a tensão no capacitor oscilar um pouco; o Zener "trava" a tensão sobre ele em exatamente 13V estáveis. É a partir dessa barreira de 13V que o potenciômetro vai trabalhar.
+
+### Potenciômetro Linear (10k Ohw): 
+Componente resistivo ajustável que funciona como a interface do usuário. Ao deslizar o cursor central (atualmente fixado em 50% de curso), ele extrai uma fração precisa de tensão da malha para controlar o nível elétrico injetado no circuito de potência.
+
+### Resistor Inferior (5,4k Ohw): 
+Fica na base do potenciômetro, conectado ao terra. Ele impede que a tensão de controle caia para 0V. Ele segura o piso inferior em 3,7V, garantindo que o ajuste mínimo da sua fonte comece exatamente em 3V.
+
+### Transistor NPN de Potência (Configuração Seguidor de Emissor): 
+Funciona como o músculo de corrente da fonte. Como a malha do potenciômetro manipula correntes muito baixas que sofreriam quedas drásticas ao alimentar qualquer dispositivo externo, o transistor recebe a tensão de controle em sua Base e a replica em seu Emissor com alta capacidade de corrente, sofrendo apenas uma perda fixa de $0,7\text{V}$ na barreira interna de silício.
+
+### Resistor de Emissor (120 Ohw): 
+Resistor de estabilização de saída que garante uma circulação de corrente mínima permanente pelo transistor. Isso mantém o componente polarizado e estável mesmo quando nenhuma carga externa estiver conectada aos terminais da fonte.
+
+### LED Vermelho e Resistor Limitador (4,7k Ohw): 
+Conjunto indicador visual. O LED acende para confirmar que a fonte está ativa e gerando tensão na saída, enquanto o resistor de 4,7k Ohw limita a corrente para que o LED opere com segurança sem queimar quando a saída atingir o valor máximo de 12V.
+
 
 # Circuito Falstad
 <img width="1293" height="837" alt="Image" src="https://github.com/user-attachments/assets/cff179f6-9f50-4843-80ac-7bbac707707a" />
