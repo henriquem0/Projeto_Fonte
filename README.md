@@ -64,7 +64,7 @@ Conjunto indicador visual. O LED acende para confirmar que a fonte está ativa e
 ### 1. Cálculo do Transformador e Entrada
 A tensão residencial nominal eficaz da tomada é $V_{\text{RMS}} = 127\text{ V}$. O valor de pico máximo dessa senoide alimentadora é:
 
-$$V_{\text{pico}} = V_{\text{RMS}} \times \sqrt{2} = 127 \times 1{,}4142 \approx 180\text{ V}$$
+$$V{\text{pico}} = V{\text{RMS}} \times \sqrt{2} = 127 \times 1{,}4142 \approx 180\text{ V}$$
 
 No simulador, a tensão contínua perfeitamente estabilizada sobre o capacitor de filtro atingiu o pico de $25{,}959\text{ V}$ ($\approx 26\text{ V}$). A relação de transformação de espiras ($N$) necessária para ajustar o transformador é dada por:
 
@@ -73,15 +73,15 @@ $$\text{Relação de Espiras} = \frac{V_{\text{pico\_primario}}}{V_{\text{capaci
 ### 2. Comportamento de Queda no Transistor
 O transistor NPN operando como seguidor de emissor dita que a tensão final disponível na saída ($V_{\text{saida}}$) rastreia a tensão ajustada na base ($V_{\text{base}}$), subtraindo a barreira de silício da junção Base-Emissor ($V_{\text{BE}} = 0{,}7\text{ V}$):
 
-$$V_{\text{saida}} = V_{\text{base}} - 0{,}7\text{ V} \implies V_{\text{base}} = V_{\text{saida}} + 0{,}7\text{ V}$$
+$$V{\text{saida}} = V{\text{base}} - 0{,}7\text{ V} \implies V{\text{base}} = V{\text{saida}} + 0{,}7\text{ V}$$
 
 Para alcançar a janela de regulação final na saída da fonte (de 3V a 12V), a base precisa receber os seguintes limites:
 
 * **Para saída mínima de 3V:**
-  $$V_{\text{base\_minima}} = 3\text{ V} + 0{,}7\text{ V} = 3{,}7\text{ V}$$
+  $$V{\text{base\_minima}} = 3\text{ V} + 0{,}7\text{ V} = 3{,}7\text{ V}$$
 
 * **Para saída máxima de 12V:**
-  $$V_{\text{base\_maxima}} = 12\text{ V} + 0{,}7\text{ V} = 12{,}7\text{ V}$$
+  $$V{\text{base\_maxima}} = 12\text{ V} + 0{,}7\text{ V} = 12{,}7\text{ V}$$
 
 ### 3. Dimensionamento do Resistor de Proteção do Zener ($R_Z$)
 O barramento bruto após a filtragem fornece $26\text{ V}$. O diodo Zener fixa firmemente a tensão em seu terminal em $13\text{ V}$ ($13{,}015\text{ V}$ no simulador). A queda de potencial que o resistor de $1{,}2\text{ k}\Omega$ precisa suportar isoladamente é:
