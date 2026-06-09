@@ -3,7 +3,7 @@ Fonte de tensão desenvolvida na disciplina de Eletrônica (BCC/USP). Converte 1
 
 
 # Circuito Falstad
-
+<img width="1293" height="837" alt="Image" src="https://github.com/user-attachments/assets/cff179f6-9f50-4843-80ac-7bbac707707a" />
 
 
 
