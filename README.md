@@ -60,43 +60,44 @@ Conjunto indicador visual. O LED acende para confirmar que a fonte está ativa e
 
 
 
-## Cálculos Necessários
+## Cálculo Prático do Circuito
+
 ### 1. Cálculo do Transformador e Entrada
-A tensão residencial nominal eficaz da tomada é $V_{\text{RMS}} = 127\text{ V}$. O valor de pico máximo dessa senoide alimentadora é:
+A tensão residencial nominal eficaz da tomada é $V_{RMS} = 127\text{V}$. O valor de pico máximo dessa senoide alimentadora é dado por:
 
-$$V{\text{pico}} = V{\text{RMS}} \times \sqrt{2} = 127 \times 1{,}4142 \approx 180\text{ V}$$
+$$V_{pico} = V_{RMS} \times \sqrt{2} = 127 \times 1,4142 \approx 180\text{V}$$
 
-No simulador, a tensão contínua perfeitamente estabilizada sobre o capacitor de filtro atingiu o pico de $25{,}959\text{ V}$ ($\approx 26\text{ V}$). A relação de transformação de espiras ($N$) necessária para ajustar o transformador é dada por:
+No simulador, a tensão contínua perfeitamente estabilizada sobre o capacitor de filtro atingiu o pico de $25,959\text{V}$ ($\approx 26\text{V}$). A relação de transformação de espiras ($N$) necessária para ajustar o transformador é calculada pela fórmula:
 
-$$\text{Relação de Espiras} = \frac{V_{\text{pico\_primario}}}{V_{\text{capacitor}}} = \frac{180\text{ V}}{26\text{ V}} \approx 6{,}92$$
+$$\text{Relação de Espiras} = \frac{V_{pico}}{V_{capacitor}} = \frac{180\text{V}}{26\text{V}} \approx 6,92$$
 
 ### 2. Comportamento de Queda no Transistor
-O transistor NPN operando como seguidor de emissor dita que a tensão final disponível na saída ($V_{\text{saida}}$) rastreia a tensão ajustada na base ($V_{\text{base}}$), subtraindo a barreira de silício da junção Base-Emissor ($V_{\text{BE}} = 0{,}7\text{ V}$):
+O transistor NPN operando como seguidor de emissor dita que a tensão final disponível na saída ($V_{saida}$) rastreia a tensão ajustada na base ($V_{base}$), subtraindo a barreira de silício da junção Base-Emissor ($V_{BE} = 0,7\text{V}$):
 
-$$V{\text{saida}} = V{\text{base}} - 0{,}7\text{ V} \implies V{\text{base}} = V{\text{saida}} + 0{,}7\text{ V}$$
+$$V_{saida} = V_{base} - 0,7\text{V} \implies V_{base} = V_{saida} + 0,7\text{V}$$
 
 Para alcançar a janela de regulação final na saída da fonte (de 3V a 12V), a base precisa receber os seguintes limites:
 
 * **Para saída mínima de 3V:**
-  $$V{\text{base\_minima}} = 3\text{ V} + 0{,}7\text{ V} = 3{,}7\text{ V}$$
+  $$V_{base\_minima} = 3\text{V} + 0,7\text{V} = 3,7\text{V}$$
 
 * **Para saída máxima de 12V:**
-  $$V{\text{base\_maxima}} = 12\text{ V} + 0{,}7\text{ V} = 12{,}7\text{ V}$$
+  $$V_{base\_maxima} = 12\text{V} + 0,7\text{V} = 12,7\text{V}$$
 
 ### 3. Dimensionamento do Resistor de Proteção do Zener ($R_Z$)
-O barramento bruto após a filtragem fornece $26\text{ V}$. O diodo Zener fixa firmemente a tensão em seu terminal em $13\text{ V}$ ($13{,}015\text{ V}$ no simulador). A queda de potencial que o resistor de $1{,}2\text{ k}\Omega$ precisa suportar isoladamente é:
+O barramento bruto após a filtragem fornece 26V. O diodo Zener fixa firmemente a tensão em seu terminal em 13V (13,015V no simulador). A queda de potencial que o resistor de $1,2\text{k}\Omega$ precisa suportar isoladamente é:
 
-$$V_{RZ} = V_{\text{capacitor}} - V_{\text{Zener}} = 26\text{ V} - 13\text{ V} = 13\text{ V}$$
+$$V_{RZ} = V_{capacitor} - V_{Zener} = 26\text{V} - 13\text{V} = 13\text{V}$$
 
 A corrente contínua que passa por ele para alimentar o diodo Zener é de:
 
-$$I_{RZ} = \frac{V_{RZ}}{R_Z} = \frac{13\text{ V}}{1200\text{ }\Omega} \approx 0{,}0108\text{ A}\quad(10{,}8\text{ mA})$$
+$$I_{RZ} = \frac{V_{RZ}}{R_Z} = \frac{13\text{V}}{1200\Omega} \approx 0,0108\text{A} \quad (10,8\text{mA})$$
 
 **Cálculo Crítico de Aquecimento (Potência):**
 
-$$P_{RZ} = V_{RZ} \times I_{RZ} = 13\text{ V} \times 0{,}0108\text{ A} \approx 0{,}14\text{ W}$$
+$$P_{RZ} = V_{RZ} \times I_{RZ} = 13\text{V} \times 0,0108\text{A} \approx 0,14\text{W}$$
 
-Como a dissipação deu $0{,}14\text{ W}$, um resistor padrão de película de carbono comum de $1/4\text{ W}$ ($0{,}25\text{ W}$) é plenamente capaz de operar neste ponto do circuito sem risco de superaquecimento.
+Como a dissipação resultou em $0,14\text{W}$, um resistor padrão de película de carbono comum de $1/4\text{W}$ ($0,25\text{W}$) é plenamente capaz de operar neste ponto do circuito sem nenhum risco de fadiga térmica.
 
 # Circuito Falstad
 <img width="1293" height="837" alt="Image" src="https://github.com/user-attachments/assets/cff179f6-9f50-4843-80ac-7bbac707707a" />
