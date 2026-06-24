@@ -106,7 +106,7 @@ Como a dissipação resultou em $0{,}212\text{W}$, um resistor padrão de pelíc
 
 # Circuito no Tinkercad
 <img width="1355" height="502" alt="Image" src="https://github.com/user-attachments/assets/5a721d46-0a02-44f6-a680-134518d1cf25" />
->OBS: o tinkercad não está completamente atualizado, houve algumas alterações pontuais no projeto final!
+> OBS: o tinkercad não está completamente atualizado, houve algumas alterações pontuais no projeto final!
 
 # Circuito Falstad
 <img width="1533" height="821" alt="image" src="https://github.com/user-attachments/assets/bef52ce5-dcdf-4e17-b695-0888adef5b53" />
