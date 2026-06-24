@@ -104,6 +104,9 @@ $$P_{RZ} = V_{RZ} \times I_{RZ} = 15{,}95\text{V} \times 0{,}0133\text{A} \appro
 
 Como a dissipação resultou em $0{,}212\text{W}$, um resistor padrão de película de carbono de $1/4\text{W}$ ($0{,}25\text{W}$) opera com margem de segurança reduzida (~15% de folga). Recomenda-se considerar um resistor de **$1/2\text{W}$** neste ponto do circuito para garantir maior margem térmica.
 
+## Teste Prático do Projeto
+Link: [vídeo com a simulação:](https://drive.google.com/file/d/19jI36FHS5uJlNkU8lmKdyK1yTJA2pyc6/view?usp=drive_link)
+
 # Circuito no Tinkercad
 <img width="1355" height="502" alt="Image" src="https://github.com/user-attachments/assets/5a721d46-0a02-44f6-a680-134518d1cf25" />
 > OBS: o tinkercad não está completamente atualizado, houve algumas alterações pontuais no projeto final!
