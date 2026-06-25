@@ -111,7 +111,8 @@ Link: [vídeo com a simulação:](https://drive.google.com/file/d/19jI36FHS5uJlN
 <img width="770" height="442" alt="Image" src="https://github.com/user-attachments/assets/327bc7bc-51a1-4427-8d97-402d29e407f3" />
 
 # Projeto PCB
-
+<img width="648" height="343" alt="image" src="https://github.com/user-attachments/assets/3b9f0ce4-ff5f-4231-9659-1f7ce5d78626" />
+<img width="650" height="346" alt="image" src="https://github.com/user-attachments/assets/bb7110e3-3847-4ecf-92df-db5effe5f0f7" />
 
 # Circuito no Tinkercad
 <img width="1355" height="502" alt="Image" src="https://github.com/user-attachments/assets/5a721d46-0a02-44f6-a680-134518d1cf25" />
