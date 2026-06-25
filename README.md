@@ -107,6 +107,12 @@ Como a dissipação resultou em $0{,}212\text{W}$, um resistor padrão de pelíc
 ## Teste Prático do Projeto
 Link: [vídeo com a simulação:](https://drive.google.com/file/d/19jI36FHS5uJlNkU8lmKdyK1yTJA2pyc6/view?usp=drive_link)
 
+# Circuito Easy Eda
+<img width="770" height="442" alt="Image" src="https://github.com/user-attachments/assets/327bc7bc-51a1-4427-8d97-402d29e407f3" />
+
+# Projeto PCB
+
+
 # Circuito no Tinkercad
 <img width="1355" height="502" alt="Image" src="https://github.com/user-attachments/assets/5a721d46-0a02-44f6-a680-134518d1cf25" />
 > OBS: o tinkercad não está completamente atualizado, houve algumas alterações pontuais no projeto final!
