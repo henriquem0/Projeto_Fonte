@@ -10,22 +10,24 @@ Construção de uma fonte de tensão retificadora ajustável entre 3V e 12V com 
 # Tabela de Componentes 
 |Quantidade|Componente|Descrição|Valor Unitário|
 |:---------|:---------|:--------|:-------------|
-|1         |Protoboard|xxx pontos de conexão|	R$ 39,10|
+|1         |Protoboard|830 pontos de conexão|	R$ 0,00 (já tinhamos)|
 |1	|Kit Jumper	|Macho-Macho + Macho-Fêmea	|R$ 28,89|
-|1	|Capacitor	|470 uF|	R$ 0,44|
-|1	|Potenciômetro	|10 kΩ, 1W|	R$ 7,00|
-|1	|Resistor	|1,2 kΩ, 1W|	R$ 0,40|
-|1	|Resistor	|5,4 kΩ|	R$ 0,07|
-|4	|Resistor	|120 Ω|	R$ 0,13|
+|1	|Capacitor	|1000 uF 5V|Emprestado|
+|1	|Potenciômetro	|5 kΩ, 1W|	R$ 7,00|
+|1	|Resistor	|1 kΩ, 1W|	R$ 0,40|
+|1	|Resistor	|2,2 kΩ|	R$ 0,07|
+|3	|Resistor	|120 Ω|	R$ 0,13|
+|1	|Resistor |80 Ω|	R$ 0,13|
+|1	|Resistor	5W |120 Ω|	R$ 1,90|
 |1	|Resistor	|4,7 kΩ, 2W|	R$ 1,20|
 |4	|Diodo Retificador	|1N4007|	R$ 0,20|
 |1	|Diodo Zener	|13V, 1W|	R$ 0,50|
+|1	|Diodo Zener	|12V, 1W|	R$ 0,50|
 |1	|LED	5MM |Difuso 333‑2SDRD/S530‑L|	R$ 0,50|
 |1	|Transistor	|NPN BC338-25|	R$ 0,45|
 
-> Valor total gasto:
-
-
+> Valor total gasto: R$ 42,73 (valor aproximado)
+[
 
 ## Papel de Cada Componente
 ### Transformador
@@ -104,8 +106,12 @@ $$P_{RZ} = V_{RZ} \times I_{RZ} = 15{,}95\text{V} \times 0{,}0133\text{A} \appro
 
 Como a dissipação resultou em $0{,}212\text{W}$, um resistor padrão de película de carbono de $1/4\text{W}$ ($0{,}25\text{W}$) opera com margem de segurança reduzida (~15% de folga). Recomenda-se considerar um resistor de **$1/2\text{W}$** neste ponto do circuito para garantir maior margem térmica.
 
+# Fotos da Fonte Final
+<img width="3027" height="1672" alt="20260629_105740" src="https://github.com/user-attachments/assets/f7d07908-4fa6-44c1-8362-eed34b3e7fd2" />
+<img width="3549" height="1592" alt="20260629_105747" src="https://github.com/user-attachments/assets/07278111-18a2-4553-92ab-8d326ad66f90" />
+
 ## Teste Prático do Projeto
-Link: [vídeo com a simulação:](https://drive.google.com/file/d/19jI36FHS5uJlNkU8lmKdyK1yTJA2pyc6/view?usp=drive_link)
+Link: [vídeo com a simulação](https://drive.google.com/file/d/19jI36FHS5uJlNkU8lmKdyK1yTJA2pyc6/view?usp=drive_link)
 
 # Circuito Easy Eda
 <img width="770" height="442" alt="Image" src="https://github.com/user-attachments/assets/327bc7bc-51a1-4427-8d97-402d29e407f3" />
